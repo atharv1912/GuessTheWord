@@ -7,16 +7,16 @@ int main() {
     char* words[] = {"algorithm", "programming", "computer", "language", "openai"};
     int numWords = sizeof(words) / sizeof(words[0]);
     
-    // Seed the random number generator with the current time
+    
     srand(time(NULL));
     
-    int randomIndex = rand() % numWords; // Generate a random index to select a word
+    int randomIndex = rand() % numWords;
     char* secretWord = words[randomIndex];
     int wordLength = strlen(secretWord);
     char guessedWord[wordLength];
-    int attempts = 6; // Number of allowed attempts
+    int attempts = 6; 
 
-    // Initialize guessedWord to underscores
+    
     for (int i = 0; i < wordLength; i++) {
         guessedWord[i] = '_';
     }
@@ -31,7 +31,7 @@ int main() {
         printf("Enter a letter: ");
         scanf(" %c", &guess);
 
-        int found = 0;  // Flag to check if the guessed letter is found in the secret word
+        int found = 0;  
 
         for (int i = 0; i < wordLength; i++) {
             if (secretWord[i] == guess) {
