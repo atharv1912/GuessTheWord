@@ -7,22 +7,22 @@ int main() {
     char* words[] = {"algorithm", "programming", "computer", "language", "openai"};
     int numWords = sizeof(words) / sizeof(words[0]);
     
-    // Seed the random number generator with the current time
+
     srand(time(NULL));
     
-    int randomIndex = rand() % numWords; // Generate a random index to select a word
+    int randomIndex = rand() % numWords; 
     char* secretWord = words[randomIndex];
     int wordLength = strlen(secretWord);
     char guessedWord[wordLength];
-    int attempts = 6; // Number of allowed attempts
+    int attempts = 6; 
 
-    // Initialize guessedWord to underscores
+
     for (int i = 0; i < wordLength; i++) {
         guessedWord[i] = '_';
     }
     guessedWord[wordLength] = '\0';
 
-    printf("Welcome to the 'Guess the Word' game!\n");
+    printf("**************Welcome to the 'Guess the Word' game!**************\n");
     printf("You have %d attempts to guess the word.\n\n", attempts);
 
     while (attempts > 0) {
@@ -31,7 +31,7 @@ int main() {
         printf("Enter a letter: ");
         scanf(" %c", &guess);
 
-        int found = 0;  // Flag to check if the guessed letter is found in the secret word
+        int found = 0;  
 
         for (int i = 0; i < wordLength; i++) {
             if (secretWord[i] == guess) {
@@ -48,7 +48,7 @@ int main() {
         }
 
         if (strcmp(secretWord, guessedWord) == 0) {
-            printf("Congratulations! You've guessed the word: %s\n", secretWord);
+            printf("Congratulations! You've guessed the word: %s in %d attempts \n", secretWord, attempts);
             break;
         }
     }
