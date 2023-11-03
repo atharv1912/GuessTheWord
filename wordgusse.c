@@ -4,7 +4,8 @@
 #include <time.h>
 
 int main() {
-    char* words[] = {"algorithm", "programming", "computer", "language", "openai"};
+    char* words[] = {"algorithm", "programming", "computer", "language", "vesit","windows","linux","lenovo","Blockchain","Cybersecurity","Encryption","Network","Robotics","Automation","Internet","Database","Hacker"};
+
     int numWords = sizeof(words) / sizeof(words[0]);
     
 
